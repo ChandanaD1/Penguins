@@ -1,0 +1,47 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: red;
+}
+
+h1 {
+    color: #333;
+}
+
+/* Navigation Bar */
+nav { /* nav styling */
+    background-color: #333;
+    overflow: hidden; /* ensures nav bar contents don't overflow */
+    position: fixed;
+    top: 10;
+    right: 10;
+    width: auto;
+    z-index: 1000;
+}
+
+nav ul { /* ul styling */
+    list-style-type: none; /* removes default bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li { /* li styling */
+    float: left; /* aligns items left */
+}
+
+nav ul li a { /* a styling */
+    display: block; /* link takes up full space */
+    color: white; /* text color  */
+    text-align: center; 
+    padding: 14px 16px; 
+    text-decoration: none; /* removes underline from link */
+}
+
+nav ul li a:hover { /* a styling when mouse hovers over it */
+    background-color: #111; /* changes color to darker grey */
+}
