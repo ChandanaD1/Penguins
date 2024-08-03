@@ -26,3 +26,4 @@ Download the GitHub file. Then, in the terminal install Django using pip and run
 ## How to Use the Project
 Sign up for an account, fill out all necessary information, and you will get matched. Once you recieve the necessary information, you will be able to schedule a meeting.
 
+
