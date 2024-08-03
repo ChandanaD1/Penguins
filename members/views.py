@@ -9,20 +9,8 @@ def signup(request):
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
-            mentor_or_mentee = form.cleaned_data.get('mentor_or_mentee')
-            
-            # Add user to the selected group
-            if mentor_or_mentee == 'mentor':
-                group_obj = Group.objects.get(name='Mentors')
-            elif mentor_or_mentee == 'mentee':
-                group_obj = Group.objects.get(name='Mentees')
-            
-            user.groups.add(group_obj)
-
-            username = form.cleaned_data.get('username')
             login(request,user)
-            messages.success(request, f'Account created for {username}!')
-            return redirect('login')
+            return redirect('profile')
         else:
             messages.error(request, 'There was an error with the registration form.')
     else:

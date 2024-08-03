@@ -1,0 +1,93 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #EDE8F5;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+section {
+    display: block;
+    padding: 20px;
+    margin: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+section h2 {
+    color: #007BFF;
+}
+
+#about-us {
+    margin-bottom: 40px;
+}
+
+/* Buttons */
+
+.button {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust size as needed */
+    margin:10px;
+    font-size: 16px; /* Font size of the button text */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    color: white; /* Text color */
+    background-color: #7091E6; /* Background color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.button:hover {
+    background-color: #5e7fd0; /* Darker background on hover */
+}
+
+nav { /* nav styling */
+    background-color: #333;
+    overflow: hidden; /* ensures nav bar contents don't overflow */
+    position: fixed;
+    top: 10;
+    right: 10;
+    width: auto;
+    z-index: 1000;
+}
+
+nav ul { /* ul styling */
+    list-style-type: none; /* removes default bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li { /* li styling */
+    float: left; /* aligns items left */
+}
+
+nav ul li a { /* a styling */
+    display: block; /* link takes up full space */
+    color: white; /* text color  */
+    text-align: center; 
+    padding: 14px 16px; 
+    text-decoration: none; /* removes underline from link */
+}
+
+nav ul li a:hover { /* a styling when mouse hovers over it */
+    background-color: #111; /* changes color to darker grey */
+}

@@ -1,24 +1,76 @@
 <!--Srinija-->
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Scheduling</title> 
-    <link rel="stylesheet" href="styles.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule a Meeting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #3d52a0;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="time"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #7091E6;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 <body>
-    <nav> 
-        <ul> 
-            <li><a href="schedule.html"> Schedule </a></li> 
-            <li><a href="profile.html"> Profile </a></li>
-            <!--we should link the home page onto the logo if possible-->
-        </ul>
-    </nav>
-    <h1>Schedule Appointments</h1> 
+    <div class="container">
+        <h2>Schedule a Meeting</h2>
+        <form action="/submit-meeting" method="post">
+            <label for="menteeName">Mentee Name:</label>
+            <input type="text" id="menteeName" name="menteeName" required>
 
-    <!--we should include a message saying if they want to update mentor matching, to contact us @email-->
+            <label for="meetingDate">Date of Meeting:</label>
+            <input type="date" id="meetingDate" name="meetingDate" required>
 
-    <script src="scripts.js"></script> 
+            <label for="meetingTime">Time of Meeting:</label>
+            <input type="time" id="meetingTime" name="meetingTime" required>
+
+            <label for="meetingDuration">Duration of Meeting (in minutes):</label>
+            <input type="number" id="meetingDuration" name="meetingDuration" required>
+
+            <button type="submit">Schedule Meeting</button>
+        </form>
+    </div>
 </body>
 </html>

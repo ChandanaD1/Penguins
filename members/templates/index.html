@@ -1,18 +1,75 @@
-<!--Sidd - stylize and format (should include About Us, Objective, Website Features, Resources, Timeline, Contact Us)-->
+<!DOCTYPE html>
+<!--Javi - stylize and format (should include About Us, Objective, Website Features, Resources, Timeline, Contact Us)-->
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--set window size to size of computer screen-->
     <title>NextGen College</title> <!--title of tab-->
-    {% load static %}
+    <!--{% load static %}-->
     <link rel="stylesheet" href="{% static 'styles.css' %}"> <!--link the style sheet (href specifies url)-->
 </head>
+ 
 <body>
-    <h1>Welcome to NextGen College</h1> <!--header style on screen-->
-    <button id="loginButton" class="button">Login</button>
-    <button id="signupButton" class="button">Sign Up</button>
 
-    <script src="{% static 'scripts.js' %}"></script> <!-- link the javascript code -->
+    <header>
+        <h1>NextGen College</h1>
+        <button id="loginButton" class="button">Login</button>
+        <button id="signupButton" class="button">Sign Up</button>
+    </header>
+
+    <!-- buttons -->
+
+    <div class="container">
+        <section id="about-us" class="half">
+            <h2>About Us</h2>
+            <p>At NextGen College, we understand that navigating the college application process can be especially very challenging for first-generation, low-income (FGLI) students due to barriers in accessing necessary resources. The NextGen College platform is dedicated to addressing these challenges by offering free mentorship to FGLI students. Our mission and goal is to connect these students with experienced college mentors who can guide them through every step of the college application journey. These volunteer-based interactions aim to help FGLI students pursue further study and follow their dreams.</p>
+        </section>
+    </div>
+
+    <section id="objectives">
+        <div class="top">
+            <h3>Data Forms</h3>
+            <p>When registering, each user will fill out information regarding their college background, including grade, major/desired major, college/desired college, financial situation, and mentor/mentee status. This information is stored in the Django database, where we, the founders, can match mentors and mentees. Through this data form, NextGen College can provide FGLI students with the most personalized college help experience that targets their specific situations.</p>
+        </div>
+        <div class="mid">
+            <h3>Matching System</h3>
+            <p>To streamline the mentor-mentee matching process on NextGen College, we will implement a multi-step system. First, a comprehensive signup form will collect essential contact information and relevant details from both mentors and mentees, including education level, subjects of interest, availability, and mentorship goals. This will allow our team to match mentors and mentees accordingly. Next, we will integrate a scheduling tab that allows mentors and mentees to arrange meetings through a user-friendly calendar system, with automated notifications and reminders. Each meeting will be logged with date, time, duration, and participants to track hours and generate reports.</p>
+        </div>
+        <div class="btm">
+            <h3>Resources</h3>
+            <p>At NextGen College, we provide an extensive Resources section to support FGLI students through every stage of the college application process. Our resources include comprehensive guides on essay writing, financial aid and scholarship databases, and tools for effective deadline management. Additionally, we offer test preparation materials, college search and comparison tools, and essential tips for campus visits and college interviews. By leveraging these resources, students can gain the knowledge and confidence needed to successfully navigate their college journey.To help manage the often overwhelming deadlines, we offer tools and calendars that keep track of important application and scholarship dates. For test preparation, we provide links to SAT and ACT .</p>
+        </div>
+    </section>
+
+    <section id="timeline">
+        <h2>Timeline</h2>
+        <marquee behavior="scroll" direction="left"><img src="{% static 'timeline.png' %}" height=272 width=auto></marquee>
+    </section>
+
+    <section id="contact-us">
+        <h2>Contact Us</h2>
+        <p>Feel free to reach out through the following channels...</p>
+        <form action="/contact" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="button">Send Message</button>
+        </form>
+    </section>
+
+    <section id="signup">
+        <h2>Interested? Sign Up</h2>
+        <button id="signupButton" class="button">Sign Up</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 NextGen College. All rights reserved.</p>
+    </footer>
+
+    <script src="{% static 'scripts.js' %}"></script> <!-- link the javascript code -->   
 </body>
 </html>
+
+

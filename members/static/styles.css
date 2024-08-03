@@ -2,28 +2,36 @@ body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #EDE8F5;
+    overflow-x: hidden;
 }
 
-h1 {
-    color: #333;
+header {
+    background-color: #6684d0;
+    color: #EDE8F5;
+    padding: 20px 0;
+    text-align: center;
 }
 
-/* Buttons */
+header h1 {
+    color: #EDE8F5;
+    font-size: 50px;
+}
 
 .button {
     display: inline-block;
     padding: 10px 20px; /* Adjust size as needed */
     margin:10px;
+    margin-top: 0;
     font-size: 16px; /* Font size of the button text */
     text-align: center; /* Center text */
     text-decoration: none; /* Remove underline */
     color: white; /* Text color */
-    background-color: #7091E6; /* Background color */
+    background-color: #3D52A0; /* Background color */
     border: none; /* Remove border */
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
@@ -34,35 +42,95 @@ h1 {
     background-color: #5e7fd0; /* Darker background on hover */
 }
 
-/* Navigation Bar */
-nav { /* nav styling */
-    background-color: #333;
-    overflow: hidden; /* ensures nav bar contents don't overflow */
-    position: fixed;
-    top: 10;
-    right: 10;
-    width: auto;
-    z-index: 1000;
+h1 {
+    color: #333;
 }
 
-nav ul { /* ul styling */
-    list-style-type: none; /* removes default bullet points */
-    margin: 0;
+section {
+    display: block;
+    padding: 20px;
+    margin: 20px;
+    background-color: #d9d2e4;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    align-items: center; /* Vertically center-align items */
+    justify-content: space-between; /* Distribute space between items */
+}
+
+.half {
+    margin-top: 40px;
+    width: 50%;
+}
+
+section h2 {
+    color: #6684d0;
+}
+
+section h3 {
+    color: #EDE8F5;
+    text-align: center;
     padding: 0;
+    margin: 0;
 }
 
-nav ul li { /* li styling */
-    float: left; /* aligns items left */
+#about-us, #objectives, #contact-us, #signup {
+    margin-bottom: 40px;
 }
 
-nav ul li a { /* a styling */
-    display: block; /* link takes up full space */
-    color: white; /* text color  */
-    text-align: center; 
-    padding: 14px 16px; 
-    text-decoration: none; /* removes underline from link */
+#objectives {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    grid-template-rows: 1fr 1fr 1fr; /* Three equal rows */
+    height: 100vh; /* Full viewport height for spacing */
 }
 
-nav ul li a:hover { /* a styling when mouse hovers over it */
-    background-color: #111; /* changes color to darker grey */
+.top, .mid, .btm {
+    padding: 20px;
+    background-color: #3D52A0; /* Optional: Background color for visibility */
+    margin: 10px; /* Optional: Space around each objective */
+    color: #EDE8F5;
+}
+
+.top {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+.mid {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+.btm {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+
+#contact-us form input, #contact-us form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.form-container {
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
 }
